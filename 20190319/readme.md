@@ -73,21 +73,21 @@
 	`
 	<input type="submit" value="提交">
 	`
-##iframe 画中画
+## iframe 画中画
 >用实现在当前页面包含其他页面
 
 
 
-##a标签跳转
+## a标签跳转
 
 * target = "_self" 当前页面跳转
 * target = "_black" 新窗口跳转
 * target = "_parent" 父类窗口刷新
 * target = "_top" 顶级父类窗口刷新
 
-#git
+# git
 >版本控制器
-##基本命令
+## 基本命令
 * 在文件夹内输入 git init 初始化仓库
 * git status 查看文件是否被暂存或者存储
 * git add . 把文件存入暂存区
@@ -97,7 +97,7 @@
 * git push -u origin master
   把本地文件提到远程github
 * 第二次暂存提交后 不需要再配置源信息 提交只需要git    push即可
-#github
+# github
 >前端最重要的网站.
 
 * 网址 https://github.com/
@@ -105,7 +105,8 @@
 * 重要: Repository name不能写中文
 * 不要勾选 "Initialize this repository with a README" 
 
-##遇到的问题
+
+## 遇到的问题
 
 + 
 	git remote add origin**************
