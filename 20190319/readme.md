@@ -104,3 +104,18 @@
 * 点击右上角 +  new  repository
 * 重要: Repository name不能写中文
 * 不要勾选 "Initialize this repository with a README" 
+
+##遇到的问题
+
++ 
+	git remote add origin**************
+
+    fatal: remote origin already exists.
+
+    （报错远程起源已经存在。）
+
+   解决方法: 
+
+1、先输入 git remote rm origin
+
+2、再输入 git remote add origin**************
