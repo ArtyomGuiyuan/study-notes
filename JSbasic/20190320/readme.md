@@ -78,3 +78,118 @@
 型
 注： undefined 转化为Number是 为'NaN'， 任何Number与NaN相加都为
 NaN
+
+# Date和Math对象使用
+## date用法
+* Date() 返回当前时间日期
+* getDate() 返回一个月中某一天
+* getMonth() 返回月份(以数组形式存储 从0到11)
+* getFullYear() 返回年 
+* getHours() 返回小时部分
+* getMinutes() 返回分钟部分 
+* getSeconds() 返回秒数
+* getDay() 返回一周之中某一天 0(周日)到6(周六) 之间的一个整数
+
+'
+
+	var date = new Date();
+	var year = date.getFullYear(),
+    	month = date.getMonth(),
+    	day = date.getDate(),
+    	hour = date.getHours(),
+    	minute = date.getMinutes(),
+    	second = date.getSeconds();
+    	weekend = date.getDay();
+	var dateStr = year + "-" + (month+1) + "-" + day + "星期" + weekend +" "+ hour + ":" + minute + ":" + second ;
+
+	console.log(dateStr);	
+'
+## Math对象
+### Math.ceil()天花板函数
+* 返回一个数字的整数部分(向上舍入) 
+* 不会对数字进行四舍五入
+
+ 	 Math.ceil(2.3)
+  	
+	3
+
+
+
+
+### Math.floor()地板函数
+* 向下舍入
+
+###Math.max(x,y)
+* 返回x,y之间的最大值
+
+###Math.min(x,y)
+* 返回x,y之间的最小值
+
+###Math.random()伪随机
+* 返回0-1之间的数值 范围 [0,1)
+
+####任意范围的随机数Math.floor(Math.random() *数量+ min)
+
+
+###Math.pow(x,y)
+* 返回x值得y次方
+
+###Math.round(x)
+* 把一个数字舍入最接近的整数
+
+
+
+#比较运算符
+* >
+* <
+* >=
+* <=
+* ==
+* === 全等于 首先对比类型再对比值 较常用
+* != 不等于
+* !== 不全等于 
+
+#关系运算符 
+##得到的结果都是布尔值 
+### 字符串比较的是ASC码  ==这个符号可以验证字符串是否相同
+
+
+#逻辑运算符
+## && (与/且) ||(或) !(非) 
+### 参与逻辑运算的，都是布尔值。也就是说，只有true、false才能参与逻辑运算，得到的答案，仍然是布尔值
+* && 都真才真 返回值:先看表达式转换成布尔值得结果 
+* || 只要有一个真就为真 返回值:遇到真就返回
+* ! 相反  !!就是将一个值变成布尔值
+
+# undefined null NaN "" 0 false 对应的布尔值====> false
+
+###连比的写法: console.log(3 < 2 && 2 < 4);
+
+
+# if语句 
+##如果... 那么... 否则...
+'
+
+	if(条件表达式){
+		条件为真的时候做的事
+	}else{
+	   条件为假的时候做的事
+	}
+
+'
+
+###多分支的if语句和跳楼现象
+
+#if语句的嵌套
+
+
+
+#三元运算符
+rs = 5<3?'明天不上班!':'明天上班!';
+
+#代码调试
+* 程序完成后点击f12
+* 设置断点
+* 运行程序
+* 一步一步执行
+* 直接选择变量名 点击鼠标右键选择add watch添加监视
