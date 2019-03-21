@@ -16,6 +16,8 @@
 
 * 注释 ctrl+/
 
+<hr>
+
 ## js变量
 ### 定义:变量是用来存储数据的容器
 * 创建一个变量: var关键字 比如var a; 声明一个变量a
@@ -90,20 +92,20 @@ NaN
 * getSeconds() 返回秒数
 * getDay() 返回一周之中某一天 0(周日)到6(周六) 之间的一个整数
 
-'
 
-	var date = new Date();
-	var year = date.getFullYear(),
-    	month = date.getMonth(),
-    	day = date.getDate(),
-    	hour = date.getHours(),
-    	minute = date.getMinutes(),
-    	second = date.getSeconds();
-    	weekend = date.getDay();
-	var dateStr = year + "-" + (month+1) + "-" + day + "星期" + weekend +" "+ hour + ":" + minute + ":" + second ;
 
-	console.log(dateStr);	
-'
+		var date = new Date();
+		var year = date.getFullYear(),
+    		month = date.getMonth(),
+    		day = date.getDate(),
+    		hour = date.getHours(),
+    		minute = date.getMinutes(),
+    		second = date.getSeconds();
+    		weekend = date.getDay();
+		var dateStr = year + "-" + (month+1) + "-" + day + "星期" + weekend +" "+ hour + ":" + minute + ":" + second ;
+
+		console.log(dateStr);	
+
 ## Math对象
 ### Math.ceil()天花板函数
 * 返回一个数字的整数部分(向上舍入) 
@@ -142,7 +144,7 @@ NaN
 # 比较运算符
 * >
 * <
-* >=
+* > =
 * <=
 * ==
 * === 全等于 首先对比类型再对比值 较常用
@@ -167,8 +169,8 @@ NaN
 
 
 # if语句 
-## 如果... 那么... 否则...
-'
+## 如果...那么...否则...
+
 
 	if(条件表达式){
 		条件为真的时候做的事
@@ -176,7 +178,7 @@ NaN
 	   条件为假的时候做的事
 	}
 
-'
+
 
 ### 多分支的if语句和跳楼现象
 
@@ -193,3 +195,53 @@ rs = 5<3?'明天不上班!':'明天上班!';
 * 运行程序
 * 一步一步执行
 * 直接选择变量名 点击鼠标右键选择add watch添加监视
+
+<hr>
+# Break 语句
+## 在当前循环体内,只要代码遇到break,程序立马结束循环.当前循环指的是break语句所在的循环体.
+
+# Continue 语句
+## continue语句值得是跳出本次循环,该语句后面的代码不再执行.
+
+# Switch 语句
+## 适合种类较少的判断(已知多少种)
+### Switch 语句后面的变量数据类型必须和case后面的数据类型保持一致
+语法
+
+'
+
+    Switch(变量n){
+		case 10:
+			执行的代码;
+			breaak;
+		case 20;
+			执行的代码;
+			break;
+		default:
+			执行的代码;
+			break;}
+
+'
+
+## Switch语句可一堆变量进行集体判断
+
+# While 循环
+## While循环的过程中,首先在While循环内部定义一个变量,然后判断条件.循环一定要有跳出条件
+
+语法
+
+	while(条件表达式){
+	当条件表达式结果为true,会一直执行while循环体内的代码。
+	当条件表达式的结果为false，while循环不再执行。
+	}
+
+# For 循环
+	
+	for(var i = 0 ; i <= 10; i++){
+		循环体代码
+	}
+
+## 执行顺序:
+* 首先进行变量初始化,并进行条件判断
+* 如果条件结果为true,那么执行循环体内的代码
+* 判断条件是否为true,继续执行循环体内代码。否则跳出循环
