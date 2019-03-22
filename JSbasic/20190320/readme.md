@@ -149,7 +149,7 @@ NaN
 * ==
 * === 全等于 首先对比类型再对比值 较常用
 * != 不等于
-* !== 不全等于 
+* !== 不全等于 4
 
 # 关系运算符 
 ## 得到的结果都是布尔值 
@@ -245,3 +245,82 @@ rs = 5<3?'明天不上班!':'明天上班!';
 * 首先进行变量初始化,并进行条件判断
 * 如果条件结果为true,那么执行循环体内的代码
 * 判断条件是否为true,继续执行循环体内代码。否则跳出循环
+
+
+# 数组 Array
+## 1.定义
+
+* 通过对象方式创建数组 var arr = new Array();
+* 直接创建数组 var arr = [];
+* 驼峰命名,如果是名字的数组 name Arr
+
+## 2.赋值 数组中通过下表的方式进行赋值.下标从0开始.arr[0]=123;或者直接初始化赋值 var arr = [1,2,3,4,5];
+
+## 3.length属性 通过数组名.length获取数组长度 (元素个数 ) arr.length
+
+## 4.数组遍历(两种方法)
+
+	var arr = ["zhangsan","jim",14,true,12,1,56];
+	for(var i = 0; i < arr.length; i ++){
+		console.log("i=======>" + i + "arr[" + i + "]=====>" + arr[i]);
+	}
+
+<br>
+
+	for(var i in arr){
+		console.log("i=======>"+ i + "arr[" + i + "]=====>" + arr[i]);
+	}
+
+
+
+## 5.数组合并 concat()方法
+### 将一个数组与另一个或多个数组或非数组元素合并并返回合并后的数组
+
+		var arr = [1,2,3,4];
+		var arr1 = [true,false,"split"];
+			
+		arr = arr.concat(1,2,["a","b","c"]);
+		console.log(arr);
+
+## 6. join() 将数组转换成字符串
+### 作用是将数组各个元素是通过指定的分隔符进行连接成为一个字符串，并返回字符串。语法： arrayObject.join(separator)数组名.join(符号);参数 separator 可选。指定要使用的分隔符。如果省略该参数，则使用逗号作为分隔符。
+
+
+	var arr = [1,2,3,4,5];
+	arr = arr.join(" ");
+	console.log(arr);
+## 7. split() 将字符串转换成数组
+### split() 方法用于把一个字符串分割成数组，并返回数组。语法：stringObject.split(separator,howmany)参数 separator 可选。指定要使用的分隔符。如果省略该参数，则创建的数组只有一个元素。howmany 可选。该参数可指定返回的数组的最大长度
+
+	var str = "smith,john,gina,white,kate";
+	var arr = str.split(",", 3);
+	console.log(arr);
+
+
+## 8. 数组的增删改查
+### unshift() push() 从数组前，后插入一个或多个元素，并返回数组的长度
+
+### shift() pop() 删除数组第一/倒一的元素，并返回被删除的元素
+
+## 9. 冒泡排序，选择排序
+### 选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。
+
+
+
+
+# 函数
+## 函数，就是一种封装，就是将一些语句封装到函数里面，通过调用的形式，执行这些语句，达到复用的效果，类似模块化封装
+### 函数的编程思想：高内聚，弱耦合
+
+### 三种创建函数的方式：函数声明，函数表达式，构造函数
+	function fn(){
+		console.log('aaa');
+	}
+	console.log(typeof fn);
+<br>
+
+	var fn1 = function(){
+		console.log("匿名函数");
+	}	
+	fn1();			
+
