@@ -131,7 +131,7 @@ var max = Math.max.apply(null,arr)//89
 ### 3.bind 和call很相似，第一个参数是this的指向，从第二个参数开始是接收的参数列表。区别在于bind方法返回值是函数以及bind接收的参数列表的使用。
 
 + bind返回值是函数
-```
+```js
 var obj = {
     name: 'Dot'
 }
@@ -148,7 +148,7 @@ dot()  // Dot
 #### bind 方法不会立即执行，而是返回一个改变了上下文 this 后的函数。而原函数 printName 中的 this 并没有被改变，依旧指向全局对象 window。
 
 + 参数的使用
-```
+```js
 function fn(a, b, c) {
     console.log(a, b, c);
 }
